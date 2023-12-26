@@ -1,6 +1,7 @@
 ---
 layout: default
 title: Directory Listing
+markdown: kramdown
 ---
 
 # Files in This Directory:
