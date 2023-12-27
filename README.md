@@ -8,6 +8,6 @@ markdown: kramdown
 
 {% for file in site.static_files %}
   {% if file.path contains '.' %}
-    - [{{ file.name | remove: 'index.html' }}]({{ file.path | absolute_url }})
+[{{ file.name | remove: 'index.html' }}]({{ file.path | absolute_url }})
   {% endif %}
 {% endfor %}
