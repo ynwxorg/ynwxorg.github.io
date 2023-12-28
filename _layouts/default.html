@@ -13,10 +13,22 @@
   <h3><a href="/">一念我行</a></h3>
   </p>
 
-  {{ content }}
+  <div id="mainContent">{{ content }}</div>
+
+  
 
 
   <script>
+
+  </script>
+
+
+  <div style="Position:fixed;bottom: 0px;background-color: black;color: white;" id="floatingDiv">
+    <button onclick="window.location.href='/'">主页</button>距离顶部：<span id="yDisplay"></span>
+  </div>
+
+  <script>
+
     document.addEventListener("DOMContentLoaded", function () {
       // Restore scroll position if available
       var savedScrollPosition = localStorage.getItem('{{ site.url }}{{ page.url }}');
@@ -30,10 +42,32 @@
         localStorage.setItem('{{ site.url }}{{ page.url }}', scrollPosition);
       };
     });
+
+
+    // 在页面加载完成后，动态计算底部边距
+    window.onload = function () {
+      adjustBottomMargin();
+    };
+
+    // 动态计算底部边距
+    function adjustBottomMargin() {
+      var mainContent = document.getElementById("mainContent");
+      var floatingDiv = document.getElementById("floatingDiv");
+
+      // 获取主要内容区域的高度
+      var mainContentHeight = floatingDiv.clientHeight;
+
+      // 设置悬浮 div 的底部边距为主要内容区域的高度
+      mainContent.style.marginBottom = mainContentHeight + "px";
+
+      console.log("底部边距：" + mainContentHeight)
+    }
+
+    // 在窗口大小变化时重新计算底部边距
+    window.onresize = function () {
+      adjustBottomMargin();
+    };
   </script>
-
-
-  <button style="Position:fixed;bottom: 0px;" onclick="window.location.href='/'">主页</button>
 
 </body>
 
