@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang=" en-US">
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="utf-8">
+  <title>一念我行 - 关于本站</title>
+  <link rel="stylesheet" href="/%20/assets/css/main.css">
+</head>
+
+<body>
+  <p>
+  <h3><a href="/">一念我行</a> - 关于本站</h3>
+  </p>
+
+  <p>本站是一个由github托管的阅读网站</p>
+
+<p>网站内容来源于互联网</p>
+
+
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      // Restore scroll position if available
+      var savedScrollPosition = localStorage.getItem('http://localhost:4000/book/%E5%85%B3%E4%BA%8E%E6%9C%AC%E7%AB%99.html');
+      if (savedScrollPosition) {
+        window.scrollTo(0, savedScrollPosition);
+      }
+
+      // Save scroll position on scroll
+      window.onscroll = function () {
+        var scrollPosition = window.scrollY || window.pageYOffset;
+        localStorage.setItem('http://localhost:4000/book/%E5%85%B3%E4%BA%8E%E6%9C%AC%E7%AB%99.html', scrollPosition);
+      };
+    });
+  </script>
+
+
+  <button style="Position:fixed;bottom: 0px;" onclick="window.location.href='/'">主页</button>
+</body>
+
+</html>

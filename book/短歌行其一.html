@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang=" en-US">
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="utf-8">
+  <title>一念我行 - 短歌行其一</title>
+  <link rel="stylesheet" href="/%20/assets/css/main.css">
+</head>
+
+<body>
+  <p>
+  <h3><a href="/">一念我行</a> - 短歌行其一</h3>
+  </p>
+
+  <p>对酒当歌，人生几何？譬如朝露，去日苦多。</p>
+
+<p>慨当以慷，忧思难忘。何以解忧？唯有杜康。</p>
+
+<p>青青子衿，悠悠我心。但为君故，沉吟至今。</p>
+
+<p>呦呦鹿鸣，食野之苹。我有嘉宾，鼓瑟吹笙。</p>
+
+<p>明明如月，何时可掇？忧从中来，不可断绝。</p>
+
+<p>越陌度阡，枉用相存。契阔谈䜩，心念旧恩。</p>
+
+<p>月明星稀，乌鹊南飞。绕树三匝，何枝可依？</p>
+
+<p>山不厌高，海不厌深。周公吐哺，天下归心。</p>
+
+
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      // Restore scroll position if available
+      var savedScrollPosition = localStorage.getItem('http://localhost:4000/book/%E7%9F%AD%E6%AD%8C%E8%A1%8C%E5%85%B6%E4%B8%80.html');
+      if (savedScrollPosition) {
+        window.scrollTo(0, savedScrollPosition);
+      }
+
+      // Save scroll position on scroll
+      window.onscroll = function () {
+        var scrollPosition = window.scrollY || window.pageYOffset;
+        localStorage.setItem('http://localhost:4000/book/%E7%9F%AD%E6%AD%8C%E8%A1%8C%E5%85%B6%E4%B8%80.html', scrollPosition);
+      };
+    });
+  </script>
+
+
+  <button style="Position:fixed;bottom: 0px;" onclick="window.location.href='/'">主页</button>
+</body>
+
+</html>

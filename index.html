@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang=" en-US">
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="utf-8">
+  <title>一念我行 - index</title>
+  <link rel="stylesheet" href="/%20/assets/css/main.css">
+</head>
+
+<body>
+  <p>
+  <h3><a href="/">一念我行</a> - index</h3>
+  </p>
+
+  <p>大家好</p>
+
+<p>【<a href="http://localhost:4000/book/%E4%B8%89%E4%BD%93">三体</a>】【<a href="http://localhost:4000/book/%E4%B8%89%E4%BD%932%E9%BB%91%E6%9A%97%E6%A3%AE%E6%9E%97">三体2黑暗森林</a>】【<a href="http://localhost:4000/book/%E4%B8%89%E4%BD%933%E6%AD%BB%E7%A5%9E%E6%B0%B8%E7%94%9F">三体3死神永生</a>】【<a href="http://localhost:4000/book/%E4%B8%89%E5%9B%BD%E6%BC%94%E4%B9%89">三国演义</a>】【<a href="http://localhost:4000/book/%E5%85%B3%E4%BA%8E%E6%9C%AC%E7%AB%99">关于本站</a>】【<a href="http://localhost:4000/book/%E5%89%8D%E5%87%BA%E5%B8%88%E8%A1%A8">前出师表</a>】【<a href="http://localhost:4000/book/%E6%B0%B4%E6%B5%92%E4%BC%A0">水浒传</a>】【<a href="http://localhost:4000/book/%E6%BB%95%E7%8E%8B%E9%98%81%E5%BA%8F">滕王阁序</a>】【<a href="http://localhost:4000/book/%E7%9F%AD%E6%AD%8C%E8%A1%8C%E5%85%B6%E4%B8%80">短歌行其一</a>】【<a href="http://localhost:4000/book/%E7%BA%A2%E6%A5%BC%E6%A2%A6">红楼梦</a>】【<a href="http://localhost:4000/book/%E8%A5%BF%E6%B8%B8%E8%AE%B0">西游记</a>】【<a href="http://localhost:4000/book/%E9%81%93%E5%BE%B7%E7%BB%8F">道德经</a>】【<a href="http://localhost:4000/book/%E9%87%91%E7%93%B6%E6%A2%85">金瓶梅</a>】</p>
+
+
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      // Restore scroll position if available
+      var savedScrollPosition = localStorage.getItem('http://localhost:4000/');
+      if (savedScrollPosition) {
+        window.scrollTo(0, savedScrollPosition);
+      }
+
+      // Save scroll position on scroll
+      window.onscroll = function () {
+        var scrollPosition = window.scrollY || window.pageYOffset;
+        localStorage.setItem('http://localhost:4000/', scrollPosition);
+      };
+    });
+  </script>
+
+
+  <button style="Position:fixed;bottom: 0px;" onclick="window.location.href='/'">主页</button>
+</body>
+
+</html>
