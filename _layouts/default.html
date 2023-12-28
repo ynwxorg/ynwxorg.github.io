@@ -35,6 +35,7 @@
       window.onscroll = function () {
         var scrollPosition = window.scrollY || window.pageYOffset;
         localStorage.setItem('{{ site.url }}{{ page.url }}', scrollPosition);
+        document.getElementById("yDisplay").innerText = scrollPosition
       };
     });
 
