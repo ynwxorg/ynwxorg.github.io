@@ -1,4 +1,5 @@
 ---
+layout: default
 ---
 {% for file in site.static_files %}{% if file.path contains 'book/' %}
 <button onclick="window.location.href='{{ file.path | absolute_url | remove: '.md'}}'">{{ file.name | remove: 'index.html' | remove: '.md'}}</button>
