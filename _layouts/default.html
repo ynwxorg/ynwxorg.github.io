@@ -9,57 +9,14 @@
 </head>
 
 <body>
-  <div id="mainContent">
+
+  <p>
+    <button onclick="window.location.href='/'">主页</button>
+  </p>
+
+  <p>
     {{ content }}
-  </div>
-
-
-	<div style="Position:fixed;width: 100%;background-color: white;top: 0;" id="floatingDiv">
-		<button onclick="window.location.href='/'">主页</button>距离顶部：<span id="yDisplay">0</span>
-	</div>
-
-  <script>
-
-    document.addEventListener("DOMContentLoaded", function () {
-      // Restore scroll position if available
-      var savedScrollPosition = localStorage.getItem('{{ site.url }}{{ page.url }}');
-      if (savedScrollPosition) {
-        window.scrollTo(0, savedScrollPosition);
-      }
-
-      // Save scroll position on scroll
-      window.onscroll = function () {
-        var scrollPosition = window.scrollY || window.pageYOffset;
-        localStorage.setItem('{{ site.url }}{{ page.url }}', scrollPosition);
-        document.getElementById("yDisplay").innerText = parseInt(scrollPosition)
-      };
-    });
-
-
-    // 在页面加载完成后，动态计算底部边距
-    window.onload = function () {
-      adjustBottomMargin();
-    };
-
-    // 动态计算底部边距
-    function adjustBottomMargin() {
-      var mainContent = document.getElementById("mainContent");
-      var floatingDiv = document.getElementById("floatingDiv");
-
-      // 获取主要内容区域的高度
-      var mainContentHeight = floatingDiv.clientHeight;
-
-      // 设置悬浮 div 的底部边距为主要内容区域的高度
-      mainContent.style.marginTop = mainContentHeight + "px";
-
-      console.log("底部边距：" + mainContentHeight)
-    }
-
-    // 在窗口大小变化时重新计算底部边距
-    window.onresize = function () {
-      adjustBottomMargin();
-    };
-  </script>
+  </p>
 
 </body>
 
